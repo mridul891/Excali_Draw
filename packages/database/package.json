@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "exports":{
+    "./client" :"./scr/index.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -14,6 +17,7 @@
     "@repo/typescript-config": "workspace:*"
   },
   "dependencies": {
+    "@prisma/client": "6.9.0",
     "prisma": "^6.9.0"
   }
 }
