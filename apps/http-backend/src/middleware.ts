@@ -1,8 +1,9 @@
 
+import { JWT_SECRET } from "@repo/backend-common/config";
 import { Request, Response, NextFunction } from "express";
 
 import jwt, { JwtPayload } from "jsonwebtoken";
-import { JWT_NEW_SECRET } from "./config.js";
+
 
 // ✅ Extend the Request interface to include custom `userId`
 interface AuthenticatedRequest extends Request {
@@ -13,7 +14,7 @@ export function middleware(req: AuthenticatedRequest, res: Response, next: NextF
   const token = req.headers.authorization ?? ""; // ✅ Use `.authorization`, not `.get()`
 
   try {
-    const decoded = jwt.verify(token, JWT_NEW_SECRET) as JwtPayload;
+    const decoded = jwt.verify(token, JWT_SECRET) as JwtPayload;
 
     if (decoded && decoded.userId) {
       req.userId = decoded.userId;
