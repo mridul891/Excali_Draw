@@ -18,8 +18,10 @@
     "@types/jsonwebtoken": "^9.0.9",
     "cors": "^2.8.5",
     "express": "^5.1.0",
-    "jsonwebtoken": "^9.0.2",
-    "@repo/backend-common" : "workspace:*",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "@repo/backend-common":"workspace:*",
     "@repo/common" : "workspace:*",
     "@repo/database":"workspace:*"
   }

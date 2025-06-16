@@ -1,0 +1,1 @@
+export const JWT_NEW_SECRET= "hellopandey"
